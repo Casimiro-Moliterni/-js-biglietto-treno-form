@@ -77,3 +77,30 @@ userPriceDiv.innerHTML = priceFinal;
 });
 
 
+// bottone rimuovi 
+
+const clearButton = document.querySelector('#clear-button');
+clearButton.addEventListener('click', function() {
+   
+    // campo input delet 
+     document.querySelector('#user-name').value ='';
+     document.querySelector('#user-km').value ='';
+     document.querySelector('#user-age').value ='';
+    
+    // stampa delet 
+    const userMessageDiv = document.querySelector('#user-name-stamped');
+    userMessageDiv.innerHTML = '';
+
+    const userTicketDiv = document.querySelector('#ticket-type');
+    userTicketDiv.innerHTML = '';
+
+    const userRandomStageDiv = document.querySelector('#random-stage');
+    userRandomStageDiv.innerHTML = '';
+
+    const userRandomTicketDiv = document.querySelector('#random-ticket');
+    userRandomTicketDiv.innerHTML = '';
+
+    const userPriceDiv = document.querySelector('#price-ticket');
+    userPriceDiv.innerHTML = '';
+   
+});
