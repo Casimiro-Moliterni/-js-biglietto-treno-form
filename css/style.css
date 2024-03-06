@@ -1,25 +1,71 @@
-/* regole di base  */
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+
 
 img{
     max-width: 100%;
 }
 
-.row{
-    display: flex;
-}
-
-.container{
-    margin: 0 auto;
-    padding: 0 10px;
-    max-width: 900px;
-}
 
 body{
     height: 100vh;
     background-color: #b91547;
+    padding-top: 30px;
+    font-family: sans-serif;
+
+}
+
+
+.card-form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+
+
+.container-row .row .col-4{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.card-form label{
+    padding-bottom: 20px;
+}
+
+
+
+
+.row-price [class*="col-"] {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+.col-namepasseger{
+    padding: 20px 15px 0 15px;
+    background-color: #757575;
+}
+
+
+
+/* typografy  */
+.color-white{
+    color: white;
+}
+.text-center{
+    text-align: center;
+}
+
+h1{
+    font-weight: 700;
+}
+
+.card-form label {
+    color: #b91547;
+    font-weight: 600;
+}
+
+.text-nowrap{
+    text-wrap: nowrap;
 }
