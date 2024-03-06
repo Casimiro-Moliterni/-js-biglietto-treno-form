@@ -1,4 +1,4 @@
-Descrizione:
+// Descrizione:
 // Scrivere un programma che chieda all’utente:
 // - Il numero di chilometri da percorrere
 // - Età del passeggero
@@ -16,8 +16,64 @@ Descrizione:
 // Come detto questa mattina nella creazione del form non utilizzate il tag <form> e per il tasto utilizzate il tag button. 
 
 // 1 chiedere km nome e cognome ed età dell'utente 
-
+console.log(document.querySelector('#generate-button'));
 const generateButton = document.querySelector('#generate-button');
-generateButton.addEventListener('click', function (){
-console.log(generateButton)
+generateButton.addEventListener('click', function () {
+    const userName = document.querySelector('#user-name').value;
+    let userKm = parseInt(document.querySelector('#user-km').value);
+    let userAge = document.querySelector('#user-age').value;
+    console.log(userName)
+    console.log(userKm)
+    console.log(userAge)
+
+    //    Price 
+ let price = userKm * 0.21 ;
+ console.log('price init',price)
+ let priceRounded = price.toFixed(2) + '€';
+ console.log(priceRounded)
+    // eta scount
+ let priceFinal;   
+if(userAge === 'Anziano') {
+    priceFinal = priceRounded - (price * 40 / 100);
+    userTicket = 'Biglietto con il 40 % di sconto';
+    randomStage = Math.floor(Math.random() * 100) + 1;
+    console.log(randomStage)
+    randomTicket = Math.floor(Math.random() * 10000) + 1;
+} else if(userAge === 'minorenne'){
+    priceFinal = priceRounded - (price * 20 / 100) ;
+   userTicket = 'Biglietto con il 2s0 % di sconto';
+   randomStage = Math.floor(Math.random() * 100) + 1;
+    console.log(randomStage)
+    randomTicket = Math.floor(Math.random() * 10000) + 1;
+} else {
+    userAge === 'Maggiorenne'
+    priceFinal= priceRounded ;
+     userTicket = 'Biglietto Standard';
+    randomStage = Math.floor(Math.random() * 100) + 1;
+    console.log(randomStage)
+    randomTicket = Math.floor(Math.random() * 10000) + 1;
+};
+
+
+
+console.log('pricefinal',priceFinal)
+
+// stampare 
+const userMessageDiv = document.querySelector('#user-name-stamped');
+userMessageDiv.innerHTML = userName;
+
+const userTicketDiv = document.querySelector('#ticket-type');
+userTicketDiv.innerHTML = userTicket;
+
+const userRandomStageDiv = document.querySelector('#random-stage');
+userRandomStageDiv.innerHTML = randomStage;
+
+const userRandomTicketDiv = document.querySelector('#random-ticket');
+userRandomTicketDiv.innerHTML = randomTicket;
+
+const userPriceDiv = document.querySelector('#price-ticket');
+userPriceDiv.innerHTML = priceFinal;
+
 });
+
+
