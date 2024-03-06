@@ -32,16 +32,16 @@ generateButton.addEventListener('click', function () {
  let priceRounded = price.toFixed(2) + '€';
  console.log(priceRounded)
     // eta scount
- let priceFinal;   
+   
 if(userAge === 'Anziano') {
-    priceFinal = priceRounded - (price * 40 / 100);
+    priceFinal = priceRounded - (priceRounded * 40 / 100);
     userTicket = 'Biglietto con il 40 % di sconto';
     randomStage = Math.floor(Math.random() * 100) + 1;
     console.log(randomStage)
     randomTicket = Math.floor(Math.random() * 10000) + 1;
 } else if(userAge === 'minorenne'){
-    priceFinal = priceRounded - (price * 20 / 100) ;
-   userTicket = 'Biglietto con il 2s0 % di sconto';
+    priceFinal = priceRounded - (priceRounded * 20 / 100) ;
+   userTicket = 'Biglietto con il 20 % di sconto';
    randomStage = Math.floor(Math.random() * 100) + 1;
     console.log(randomStage)
     randomTicket = Math.floor(Math.random() * 10000) + 1;

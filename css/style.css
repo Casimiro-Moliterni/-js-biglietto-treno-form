@@ -10,7 +10,7 @@ body{
     background-color: #b91547;
     padding-top: 30px;
     font-family: sans-serif;
-
+    padding-bottom: 30px;
 }
 
 
@@ -32,12 +32,16 @@ body{
     padding-bottom: 20px;
 }
 
+.row-price{
+    min-height: 150px;
+}
 
 
-
-.row-price [class*="col-"] {
-    padding-left: 20px;
-    padding-right: 20px;
+.row-price [class*="col-"] div{
+    font-weight: 700;
+}
+.row-price [class*="col-"] h3{
+ padding-bottom: 60px;
 }
 
 
@@ -47,6 +51,10 @@ body{
     background-color: #757575;
 }
 
+
+.box-ticket{
+    padding-left: 10px;
+}
 
 
 /* typografy  */
