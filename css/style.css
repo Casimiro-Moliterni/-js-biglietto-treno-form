@@ -34,6 +34,7 @@ body{
 
 .row-price{
     min-height: 150px;
+    padding-top: 20px;
 }
 
 
@@ -44,7 +45,10 @@ body{
  padding-bottom: 60px;
 }
 
-
+.container-row-ticket .col-8{
+    border-top:1px solid#757575 ;
+    border-bottom:1px solid #757575 ;
+}
 
 .col-namepasseger{
     padding: 20px 15px 0 15px;
@@ -76,4 +80,7 @@ h1{
 
 .text-nowrap{
     text-wrap: nowrap;
+}
+.color-pink{
+    color: #b91547;
 }
