@@ -29,34 +29,34 @@ generateButton.addEventListener('click', function () {
     //    Price 
  let price = userKm * 0.21 ;
  console.log('price init',price)
- let priceRounded = price.toFixed(2) + '€';
- console.log(priceRounded)
+
     // eta scount
-   
 if(userAge === 'Anziano') {
-    priceFinal = priceRounded - (priceRounded * 40 / 100);
+    price = price - ( price * 40 / 100);
+    console.log(price)
     userTicket = 'Biglietto con il 40 % di sconto';
     randomStage = Math.floor(Math.random() * 100) + 1;
     console.log(randomStage)
     randomTicket = Math.floor(Math.random() * 10000) + 1;
 } else if(userAge === 'minorenne'){
-    priceFinal = priceRounded - (priceRounded * 20 / 100) ;
+    price = price - ( price * 20 / 100) ;
    userTicket = 'Biglietto con il 20 % di sconto';
    randomStage = Math.floor(Math.random() * 100) + 1;
     console.log(randomStage)
     randomTicket = Math.floor(Math.random() * 10000) + 1;
 } else {
     userAge === 'Maggiorenne'
-    priceFinal= priceRounded ;
+    price = price ;
      userTicket = 'Biglietto Standard';
     randomStage = Math.floor(Math.random() * 100) + 1;
     console.log(randomStage)
     randomTicket = Math.floor(Math.random() * 10000) + 1;
 };
 
+let priceRounded = price.toFixed(2) + '€';
+ console.log(priceRounded)
 
 
-console.log('pricefinal',priceFinal)
 
 // stampare 
 const userMessageDiv = document.querySelector('#user-name-stamped');
@@ -72,7 +72,7 @@ const userRandomTicketDiv = document.querySelector('#random-ticket');
 userRandomTicketDiv.innerHTML = randomTicket;
 
 const userPriceDiv = document.querySelector('#price-ticket');
-userPriceDiv.innerHTML = priceFinal;
+userPriceDiv.innerHTML = priceRounded;
 
 });
 
